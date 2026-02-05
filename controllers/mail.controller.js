@@ -1,10 +1,10 @@
-const { transporter, mailOption } = require("../mailer")
+const { transporter, mailOption, newMessageMail } = require("../mailer")
 
 const mailUser = (req, res) =>{
     const payload = req.body
-    transporter.sendMail(mailOption(payload.fullname, payload.email)).then(info=>{
+    transporter.sendMail(mailOption(payload.fullname, payload.email)).then(info=>{        
         res.status(200).json({message: 'Mail sent successfully'})
-    }).catch(err=>{
+    }).catch(err=>{        
         res.status(500).json({message: 'An error occurred while sending mail', error: err})
     })
 }
