@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const cors = require("cors");
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const MailRouter = require("./routes/mail.route");
 
 app.use(cors({origin: '*'}))
 app.use(bodyParser.urlencoded({extended: true, limit: '50mb'}))
