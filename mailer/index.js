@@ -48,7 +48,7 @@ const mailOption = (fullname, email)=>{
 }
 
 const newMessageMail = (sender, email, text, receiver, title, id)=>{
-    const admins = ['tech.paxdav@gmail.com']
+    const admins = ['tech.paxdav@gmail.com', 'ajadipromisesilas@gmail.com']
     const inboxLink = receiver == 'Admin' ? process.env.ADMIN_CHAT : `${process.env.CLIENT_CHAT}/${id}`
     return {
         from: `PaxDav Technologies ${process.env.SITE_EMAIL}`,
